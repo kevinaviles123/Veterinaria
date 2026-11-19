@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  @apply bg-paper-50 text-ink-900 font-sans antialiased;
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pine-500 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  .btn-primary {
+    @apply btn bg-pine-700 text-white hover:bg-pine-900 shadow-lift;
+  }
+
+  .btn-accent {
+    @apply btn bg-clay-500 text-white hover:bg-clay-700;
+  }
+
+  .btn-ghost {
+    @apply btn border border-ink-100 bg-white/70 text-ink-900 hover:bg-paper-100;
+  }
+
+  .card {
+    @apply rounded-3xl border border-ink-100/80 bg-white/80 shadow-soft backdrop-blur-sm;
+  }
+
+  .field {
+    @apply w-full rounded-2xl border border-ink-100 bg-white px-4 py-2.5 text-sm text-ink-900 placeholder:text-ink-300 focus:border-pine-500 focus:outline-none focus:ring-2 focus:ring-pine-100;
+  }
+
+  .label {
+    @apply mb-1.5 block text-xs font-semibold uppercase tracking-[0.14em] text-ink-500;
+  }
+
+  .chip {
+    @apply inline-flex items-center rounded-full px-3 py-1 text-xs font-medium;
+  }
+}
+
+.fc {
+  --fc-border-color: #e8dfd3;
+  --fc-button-bg-color: #1f4a3c;
+  --fc-button-border-color: #1f4a3c;
+  --fc-button-hover-bg-color: #143028;
+  --fc-today-bg-color: #d7e8df;
+  font-family: Outfit, 'Segoe UI', sans-serif;
+}
+
+.fc .fc-toolbar-title {
+  font-family: Fraunces, Georgia, serif;
+  font-size: 1.25rem;
+}
+
